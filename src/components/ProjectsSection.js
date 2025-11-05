@@ -16,8 +16,7 @@ const projects = [
    title: "Wordpress e-commerce",
    description:
      "Fully functional online store built for a company using WordPress and WooCommerce.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
-   getImageSrc: () => require("../images/dulcesyantojos.png"),
-   url:"https://dulcesyantojos.es/"
+
  },
 
  {
