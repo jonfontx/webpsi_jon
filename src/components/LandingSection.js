@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 
 const greeting = "Jonatan Fontebasso";
-const bio1 = "Psicólogo General Sanitario";
+const bio1 = "Psicologo General Sanitario";
 const bio2 = "Colegiado T-04523";
 
 const LandingSection = () => {
