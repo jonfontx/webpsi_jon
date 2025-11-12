@@ -3,12 +3,12 @@ import { Avatar, Heading, VStack, HStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import myAvatar from "../images/avatar.JPG";
 import video from '../images/codingvideo.webm';
-import videoMp4 from "../images/videocoding.mp4"
+import videoMp4 from "../images/Terapiavideo.mp4"
 import { useEffect } from "react";
 
 
 const greeting = "Jonatan Fontebasso";
-const bio1 = "Psicologo General Sanitario";
+const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
 
 const LandingSection = () => {
