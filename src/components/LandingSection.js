@@ -6,7 +6,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import myAvatar from "../images/avatar.JPG";
+import myAvatar from "../images/avatar3.jpeg";
 import video from "../images/Terapiavideo.webm";
 import videoMp4 from "../images/Terapiavideo.mp4";
 
