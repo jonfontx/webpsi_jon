@@ -8,25 +8,25 @@ const projects = [
  {
    title: "Psicoterapia Individual",
    description:
-     "Demo Restaurant website with reserve-a-table app built using React JavaScript, HTML and CSS.", //Includes real-time availability updates and email confirmations to ensure a smooth and reliable reservation process. Designed to be responsive and accessible, ensuring that it works seamlessly across different devices and screen sizes.//
+     "Espacio confidencial donde podrás hablar con libertad sobre aquello que hoy te genera malestar. Trabajaremos juntos sobre ansiedad, estrés, autoestima, relaciones o dificultades emocionales, buscando mayor claridad, bienestar y equilibrio en tu día a día.", //Includes real-time availability updates and email confirmations to ensure a smooth and reliable reservation process. Designed to be responsive and accessible, ensuring that it works seamlessly across different devices and screen sizes.//
    getImageSrc: () => require("../images/photo12.jpeg"),
-   url:"https://reactresto.netlify.app/"
+   //url:"https://reactresto.netlify.app/"//
  },
 
  {
    title: "Psicoterapia de Pareja",
    description:
-     "Fully functional online store built for a company using WordPress and WooCommerce.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
+     "Un espacio de diálogo y acompañamiento para trabajar dificultades en la relación, mejorar la comunicación y afrontar conflictos, crisis o distanciamiento emocional. El objetivo es comprender lo que está ocurriendo entre ambos y encontrar nuevas formas de vincularse.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
     getImageSrc: () => require("../images/photo11.jpeg"),
-    url:"https://tiendaterapiavital.com/"
+    //url:"https://tiendaterapiavital.com/"//
  }, 
 
  {
-  title: "Videoconsultas",
+  title: "Consulta Online",
   description:
-    "Wireframe design of the demo website created using the Figma platform.", //It is a blueprint of the website's layout, structure, and content, and is intended to provide a visual representation of the website's design and functionality. The design incorporates a clean and modern aesthetic, with a color scheme that is consistent throughout the site.//
+    "te permite acceder a un espacio terapéutico desde donde estés, con la misma confidencialidad y acompañamiento profesional. Podrás realizar las sesiones de forma cómoda y flexible, adaptándolas a tu rutina y necesidades.", //It is a blueprint of the website's layout, structure, and content, and is intended to provide a visual representation of the website's design and functionality. The design incorporates a clean and modern aesthetic, with a color scheme that is consistent throughout the site.//
   getImageSrc: () => require("../images/photo13.jpeg"),
-  url:"https://www.figma.com/proto/1ZS9JySXpteZ0BiZSpETAY/Restaurant-Wireframe-Portfolio?node-id=1-57&scaling=min-zoom&page-id=0%3A1&mode=design&t=AIp6dyo7iaoVKFpJ-1"
+  //url:"https://www.figma.com/proto/1ZS9JySXpteZ0BiZSpETAY/Restaurant-Wireframe-Portfolio?node-id=1-57&scaling=min-zoom&page-id=0%3A1&mode=design&t=AIp6dyo7iaoVKFpJ-1"//
 },
 
 /*
