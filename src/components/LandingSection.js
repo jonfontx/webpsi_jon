@@ -47,7 +47,7 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      color="gray.800"
+      TextColor="gray.700"
       backgroundColor="#F7FAFC"
     >
       <video
