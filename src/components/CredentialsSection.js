@@ -12,8 +12,7 @@ const CredentialsSection = () => {
   return (
     <FullScreenSection
       id="credentialsSection"
-      backgroundColor="rgb(82, 27, 65)"
-      isDarkBackground
+      backgroundColor="#EDF2F7"
       p={8}
       py={16}
       minHeight="auto"
