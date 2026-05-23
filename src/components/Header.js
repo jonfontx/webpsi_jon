@@ -115,7 +115,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Projects
+              Servicios
             </Link>
             <Link
             href="#credentialsSection"
@@ -123,7 +123,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Credentials
+              Sobre mí
             </Link>
             <Link
             href="#contactme"
@@ -131,7 +131,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Contact Me
+              Reserva una consulta
             </Link>
            </HStack>
          </nav> 
