@@ -9,7 +9,12 @@ import { useEffect } from "react";
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
-const bio2 = "Colegiado T-04523";
+const bio2 = <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jlfontebasso/reserva'});return false;">Reservar</a>
+</link>;
+
+
 
 const LandingSection = () => {
   useEffect(() => {
