@@ -48,7 +48,7 @@ const LandingSection = () => {
       alignItems="center"
       textAlign="center"
       isDarkBackground
-      backgroundColor="#2A4365"
+      backgroundColor="#EDF2F7"
     >
       <video
         className="videoTag"
@@ -89,7 +89,7 @@ const LandingSection = () => {
           </Heading>
 
           <Button
-            colorScheme="purple"
+            colorScheme="teal"
             size="lg"
             borderRadius="full"
             px={8}
