@@ -4,7 +4,6 @@ import {
   Heading,
   VStack,
   Button,
-  Box,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import myAvatar from "../images/avatar3.jpeg";
@@ -49,7 +48,6 @@ const LandingSection = () => {
       alignItems="center"
       textAlign="center"
       backgroundColor="#F7FAFC"
-      position="relative"
     >
       <video
         className="videoTag"
@@ -60,26 +58,13 @@ const LandingSection = () => {
         style={{
           position: "absolute",
           zIndex: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
         }}
       >
         <source src={video} type="video/webm" />
         <source src={videoMp4} type="video/mp4" />
       </video>
 
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        width="100%"
-        height="100%"
-        bg={{ base: "transparent", md: "blackAlpha.500" }}
-        zIndex={1}
-      />
-
-      <VStack spacing={16} style={{ zIndex: 2 }}>
+      <VStack spacing={16} style={{ zIndex: 1 }}>
         <VStack spacing={4}>
           <Avatar
             src={myAvatar}
@@ -88,31 +73,17 @@ const LandingSection = () => {
             mt={{ base: "20" }}
           />
 
-          <Heading
-            as="h4"
-            size="md"
-            color={{ base: "gray.800", md: "white" }}
-          >
+          <Heading as="h4" size="md" noOfLines={1}>
             {greeting}
           </Heading>
         </VStack>
 
         <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading
-            as="h1"
-            size="lg"
-            id="bio"
-            color={{ base: "gray.800", md: "white" }}
-          >
+          <Heading as="h1" size="lg" noOfLines={1} id="bio">
             {bio1}
           </Heading>
 
-          <Heading
-            as="h2"
-            size="sm"
-            id="bio"
-            color={{ base: "gray.700", md: "white" }}
-          >
+          <Heading as="h2" size="sm" noOfLines={1} id="bio">
             {bio2}
           </Heading>
 
