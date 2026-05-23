@@ -47,7 +47,6 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      TextColor="gray.700"
       backgroundColor="#F7FAFC"
     >
       <video
@@ -65,8 +64,13 @@ const LandingSection = () => {
         <source src={videoMp4} type="video/mp4" />
       </video>
 
-      <VStack spacing={16} style={{ zIndex: 1 }}>
-        <VStack spacing={4}>
+      <VStack
+        spacing={16}
+        style={{ zIndex: 1 }}
+        w="100%"
+        align="center"
+      >
+        <VStack spacing={4} align="center">
           <Avatar
             src={myAvatar}
             size="2xl"
@@ -74,17 +78,42 @@ const LandingSection = () => {
             mt={{ base: "20" }}
           />
 
-          <Heading as="h4" size="md" noOfLines={1}>
+          <Heading
+            as="h4"
+            size="md"
+            noOfLines={1}
+            color={{ base: "gray.800", md: "white" }}
+            textAlign="center"
+          >
             {greeting}
           </Heading>
         </VStack>
 
-        <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading as="h1" size="lg" noOfLines={1} id="bio">
+        <VStack
+          spacing={6}
+          mt={{ base: "10" }}
+          align="center"
+          textAlign="center"
+          px={4}
+          maxW="90%"
+        >
+          <Heading
+            as="h1"
+            size="lg"
+            noOfLines={1}
+            id="bio"
+            color={{ base: "gray.800", md: "white" }}
+          >
             {bio1}
           </Heading>
 
-          <Heading as="h2" size="sm" noOfLines={1} id="bio">
+          <Heading
+            as="h2"
+            size="sm"
+            noOfLines={1}
+            id="bio"
+            color={{ base: "gray.700", md: "white" }}
+          >
             {bio2}
           </Heading>
 
