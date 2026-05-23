@@ -48,7 +48,7 @@ const LandingSection = () => {
       alignItems="center"
       textAlign="center"
       isDarkBackground
-      backgroundColor="#EDF2F7"
+      backgroundColor="#F7FAFC"
     >
       <video
         className="videoTag"
