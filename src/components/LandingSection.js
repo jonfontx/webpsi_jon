@@ -7,8 +7,8 @@ import {
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import myAvatar from "../images/avatar.JPG";
-import video from "../images/Terapiavideo2.webm";
-import videoMp4 from "../images/Terapiavideo2.mp4";
+import video from "../images/Terapiavideo.webm";
+import videoMp4 from "../images/Terapiavideo.mp4";
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
@@ -95,7 +95,7 @@ const LandingSection = () => {
             px={8}
             onClick={scrollToContact}
           >
-            Reservar primera sesión
+            Reservar consulta
           </Button>
         </VStack>
       </VStack>
