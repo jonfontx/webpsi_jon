@@ -4,6 +4,7 @@ import {
   Heading,
   VStack,
   Button,
+  Box,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import myAvatar from "../images/avatar3.jpeg";
@@ -48,6 +49,7 @@ const LandingSection = () => {
       alignItems="center"
       textAlign="center"
       backgroundColor="#F7FAFC"
+      position="relative"
     >
       <video
         className="videoTag"
@@ -58,13 +60,26 @@ const LandingSection = () => {
         style={{
           position: "absolute",
           zIndex: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
         }}
       >
         <source src={video} type="video/webm" />
         <source src={videoMp4} type="video/mp4" />
       </video>
 
-      <VStack spacing={16} style={{ zIndex: 1 }}>
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        bg={{ base: "transparent", md: "blackAlpha.500" }}
+        zIndex={1}
+      />
+
+      <VStack spacing={16} style={{ zIndex: 2 }}>
         <VStack spacing={4}>
           <Avatar
             src={myAvatar}
