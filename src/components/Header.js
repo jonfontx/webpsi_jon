@@ -19,7 +19,7 @@ const socials = [
  },
  {
    icon: faWhatsapp,
-   url: "https://wa.me/34632257615",
+   url: "https://github.com/jonfontx",
  },
  {
    icon: faLinkedin,
