@@ -47,7 +47,7 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#285E61"
+      backgroundColor="#F7FAFC"
     >
       <video
         className="videoTag"
@@ -73,17 +73,31 @@ const LandingSection = () => {
             mt={{ base: "20" }}
           />
 
-          <Heading as="h4" size="md" noOfLines={1}>
+          <Heading
+            as="h4"
+            size="md"
+            color={{ base: "gray.800", md: "white" }}
+          >
             {greeting}
           </Heading>
         </VStack>
 
         <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading as="h1" size="lg" noOfLines={1} id="bio">
+          <Heading
+            as="h1"
+            size="lg"
+            id="bio"
+            color={{ base: "gray.800", md: "white" }}
+          >
             {bio1}
           </Heading>
 
-          <Heading as="h2" size="sm" noOfLines={1} id="bio">
+          <Heading
+            as="h2"
+            size="sm"
+            id="bio"
+            color={{ base: "gray.700", md: "white" }}
+          >
             {bio2}
           </Heading>
 
