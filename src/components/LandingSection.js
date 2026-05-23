@@ -64,13 +64,8 @@ const LandingSection = () => {
         <source src={videoMp4} type="video/mp4" />
       </video>
 
-      <VStack
-        spacing={16}
-        style={{ zIndex: 1 }}
-        w="100%"
-        align="center"
-      >
-        <VStack spacing={4} align="center">
+      <VStack spacing={16} style={{ zIndex: 1 }}>
+        <VStack spacing={4}>
           <Avatar
             src={myAvatar}
             size="2xl"
@@ -78,39 +73,17 @@ const LandingSection = () => {
             mt={{ base: "20" }}
           />
 
-          <Heading
-            as="h4"
-            size="md"
-            color={{ base: "gray.800", md: "white" }}
-            textAlign="center"
-          >
+          <Heading as="h4" size="md" noOfLines={1}>
             {greeting}
           </Heading>
         </VStack>
 
-        <VStack
-          spacing={6}
-          mt={{ base: "10" }}
-          align="center"
-          textAlign="center"
-          px={4}
-          maxW="90%"
-        >
-          <Heading
-            as="h1"
-            size="lg"
-            id="bio"
-            color={{ base: "gray.800", md: "white" }}
-          >
+        <VStack spacing={6} mt={{ base: "10" }}>
+          <Heading as="h1" size="lg" noOfLines={1} id="bio">
             {bio1}
           </Heading>
 
-          <Heading
-            as="h2"
-            size="sm"
-            id="bio"
-            color={{ base: "gray.700", md: "white" }}
-          >
+          <Heading as="h2" size="sm" noOfLines={1} id="bio">
             {bio2}
           </Heading>
 
