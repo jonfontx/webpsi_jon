@@ -21,8 +21,8 @@ const CredentialsSection = () => {
       spacing={8}
     >
       <Container maxW="4xl">
-        <VStack align="flex-start" spacing={10}>
-          <Heading as="h1" size="2xl">
+        <VStack align="flex-start" spacing={8}>
+          <Heading as="h1" size="2xl"mb={8}>
             Sobre mí
           </Heading>
 
