@@ -21,13 +21,14 @@ const CredentialsSection = () => {
       spacing={8}
     >
       <Container maxW="4xl">
-        <VStack align="flex-start" spacing={6}>
+        <VStack align="flex-start" spacing={10}>
           <Heading as="h1" size="2xl">
             Sobre mí
           </Heading>
 
           <Text fontSize="lg" lineHeight="tall">
-            Soy psicólogo online y acompaño a personas que atraviesan
+            Psicólogo con 10 años de experiencia profesional. He ejercido tanto en hospital público como en centros y clínicas privadas.
+            Acompaño a personas que atraviesan
             dificultades como ansiedad, estrés, inseguridad, tristeza,
             problemas de autoestima o conflictos en sus relaciones personales.
           </Text>
