@@ -1,67 +1,54 @@
-import React, { useEffect } from "react";
+import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Document, Page, pdfjs } from 'react-pdf';
-import { Box, HStack, VStack, Heading } from "@chakra-ui/react";
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import courseraFront from "../images/Coursera SHZLA7EPHD3U.pdf"
-import "react-pdf/dist/esm/Page/TextLayer.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-
-
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 const CredentialsSection = () => {
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = '//cdn.credly.com/assets/utilities/embed.js';
-        script.async = true;
+  return (
+    <FullScreenSection
+      id="credentialsSection"
+      backgroundColor="rgb(82, 27, 65)"
+      isDarkBackground
+      p={8}
+      py={16}
+      alignItems="center"
+      spacing={8}
+    >
+      <Container maxW="4xl">
+        <VStack align="flex-start" spacing={6}>
+          <Heading as="h1" size="2xl">
+            Sobre mí
+          </Heading>
 
-        document.body.appendChild(script);
+          <Text fontSize="lg" lineHeight="tall">
+            Soy psicólogo online y acompaño a personas que atraviesan
+            dificultades como ansiedad, estrés, inseguridad, tristeza,
+            problemas de autoestima o conflictos en sus relaciones personales.
+          </Text>
 
-        return () => {
-            document.body.removeChild(script);
-          };
-        }, []);
+          <Text fontSize="lg" lineHeight="tall">
+            Las sesiones ofrecen un espacio seguro y confidencial donde poder
+            hablar con libertad sobre aquello que genera malestar emocional,
+            comprender mejor lo que ocurre y desarrollar nuevas herramientas
+            para afrontar el día a día con mayor claridad y equilibrio.
+          </Text>
 
-        return (
-            <FullScreenSection
-            id="credentialsSection"
-            backgroundColor="rgb(82, 27, 65)"
-            isDarkBackground
-            p={8}
-            py={16}
-            alignItems="flex-start"
-            spacing={8}
-     >
-        <Heading as="h1">
-            Credentials
-        </Heading>
-            <Box id="certificates"
-            display="grid"
-            gridTemplateColumns="1fr 1fr"
-            gridGap={{base:0,lg:20}}
-            style={{zIndex:1}}
-            >
-            <Box id="certificateBox">
-            <HStack className="pdfbox" borderRadius={16} overflow="hidden" width={750}>
-                <Document file={courseraFront}>
-                <Page pageNumber={1} className="pdf-page"/>
-                </Document>
-            </HStack>
-            </Box>
-            <VStack py={{base:0 ,lg:150}}>
-                <div
-                data-iframe-width="150"
-                data-iframe-height="270"
-                data-share-badge-id="632cc7f1-ebe6-4bae-be05-ba2cba6fed79"
-                data-share-badge-host="https://www.credly.com"
-                ></div>
-            </VStack>
-        </Box>
+          <Text fontSize="lg" lineHeight="tall">
+            Muchas personas acuden a terapia para trabajar la ansiedad,
+            mejorar su autoestima, gestionar una ruptura, aprender a poner
+            límites o sentirse mejor consigo mismas y con los demás. Cada
+            proceso terapéutico se desarrolla de manera cercana,
+            personalizada y respetando los tiempos de cada persona.
+          </Text>
+        </VStack>
+      </Container>
     </FullScreenSection>
   );
 };
-
 
 export default CredentialsSection;
