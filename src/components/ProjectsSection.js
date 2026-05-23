@@ -14,20 +14,20 @@ const projects = [
  },
 
  {
-   title: "Psicoterapia de Pareja",
-   description:
-     "Diálogo y acompañamiento para trabajar dificultades en la relación, mejorar la comunicación y afrontar conflictos, crisis o distanciamiento emocional. El objetivo es comprender lo que está ocurriendo entre ambos y encontrar nuevas formas de vincularse.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
-    getImageSrc: () => require("../images/photo11.jpeg"),
-    //url:"https://tiendaterapiavital.com/"//
- }, 
-
- {
   title: "Consulta Online",
   description:
     "Utilizando herramientas digitales autorizadas por el Colegio Oficial de Psicólogos y el Servicio de Salud, podrás acceder a un espacio terapéutico desde donde estés, con la misma confidencialidad y acompañamiento profesional. Podrás realizar las sesiones adaptándolas a tu rutina y necesidades.", //It is a blueprint of the website's layout, structure, and content, and is intended to provide a visual representation of the website's design and functionality. The design incorporates a clean and modern aesthetic, with a color scheme that is consistent throughout the site.//
   getImageSrc: () => require("../images/photo13.jpeg"),
   //url:"https://www.figma.com/proto/1ZS9JySXpteZ0BiZSpETAY/Restaurant-Wireframe-Portfolio?node-id=1-57&scaling=min-zoom&page-id=0%3A1&mode=design&t=AIp6dyo7iaoVKFpJ-1"//
 },
+
+ {
+   title: "Psicoterapia de Pareja",
+   description:
+     "Diálogo y acompañamiento para trabajar dificultades en la relación, mejorar la comunicación y afrontar conflictos, crisis o distanciamiento emocional. El objetivo es comprender lo que está ocurriendo entre ambos y encontrar nuevas formas de vincularse.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
+    getImageSrc: () => require("../images/photo11.jpeg"),
+    //url:"https://tiendaterapiavital.com/"//
+ }, 
 
  {
    title: "Espacio de lectura y reflexión",
