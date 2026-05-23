@@ -8,7 +8,7 @@ const projects = [
  {
    title: "Psicoterapia Individual",
    description:
-     "Espacio confidencial donde podrás hablar con libertad sobre aquello que hoy te genera malestar. Trabajaremos juntos sobre ansiedad, estrés, autoestima, relaciones o dificultades emocionales, buscando mayor claridad, bienestar y equilibrio en tu día a día.", //Includes real-time availability updates and email confirmations to ensure a smooth and reliable reservation process. Designed to be responsive and accessible, ensuring that it works seamlessly across different devices and screen sizes.//
+     "Espacio confidencial donde podrás hablar con libertad sobre aquello que hoy te genera malestar. Trabajaremos juntos sobre ansiedad, estrés, autoestima, identidad, relaciones o dificultades emocionales, buscando mayor claridad, bienestar y equilibrio en tu día a día.", //Includes real-time availability updates and email confirmations to ensure a smooth and reliable reservation process. Designed to be responsive and accessible, ensuring that it works seamlessly across different devices and screen sizes.//
    getImageSrc: () => require("../images/photo12.jpeg"),
    //url:"https://reactresto.netlify.app/"//
  },
@@ -16,7 +16,7 @@ const projects = [
  {
    title: "Psicoterapia de Pareja",
    description:
-     "Un espacio de diálogo y acompañamiento para trabajar dificultades en la relación, mejorar la comunicación y afrontar conflictos, crisis o distanciamiento emocional. El objetivo es comprender lo que está ocurriendo entre ambos y encontrar nuevas formas de vincularse.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
+     "Diálogo y acompañamiento para trabajar dificultades en la relación, mejorar la comunicación y afrontar conflictos, crisis o distanciamiento emocional. El objetivo es comprender lo que está ocurriendo entre ambos y encontrar nuevas formas de vincularse.", //This project serves as a testament to my practical skills in web design and highlights my ability to deliver high-quality ecommerce solutions tailored to meet specific business requirements.//
     getImageSrc: () => require("../images/photo11.jpeg"),
     //url:"https://tiendaterapiavital.com/"//
  }, 
@@ -24,19 +24,18 @@ const projects = [
  {
   title: "Consulta Online",
   description:
-    "te permite acceder a un espacio terapéutico desde donde estés, con la misma confidencialidad y acompañamiento profesional. Podrás realizar las sesiones de forma cómoda y flexible, adaptándolas a tu rutina y necesidades.", //It is a blueprint of the website's layout, structure, and content, and is intended to provide a visual representation of the website's design and functionality. The design incorporates a clean and modern aesthetic, with a color scheme that is consistent throughout the site.//
+    "Utilizando herramientas digitales autorizadas por el Colegio Oficial de Psicólogos y el Servicio de Salud, podrás acceder a un espacio terapéutico desde donde estés, con la misma confidencialidad y acompañamiento profesional. Podrás realizar las sesiones adaptándolas a tu rutina y necesidades.", //It is a blueprint of the website's layout, structure, and content, and is intended to provide a visual representation of the website's design and functionality. The design incorporates a clean and modern aesthetic, with a color scheme that is consistent throughout the site.//
   getImageSrc: () => require("../images/photo13.jpeg"),
   //url:"https://www.figma.com/proto/1ZS9JySXpteZ0BiZSpETAY/Restaurant-Wireframe-Portfolio?node-id=1-57&scaling=min-zoom&page-id=0%3A1&mode=design&t=AIp6dyo7iaoVKFpJ-1"//
 },
 
-/*
  {
-   title: "Event planner",
+   title: "Espacio de lectura y reflexión",
    description:
-     "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-   getImageSrc: () => require("../images/photo4.jpg"),
+     "Artículos y recursos sobre ansiedad, relaciones, autoestima y bienestar emocional.",
+   getImageSrc: () => require("../images/photox.jpeg"),
+   //url:""//
  },
-*/
 
 ];
 
