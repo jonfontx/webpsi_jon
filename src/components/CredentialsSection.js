@@ -16,6 +16,7 @@ const CredentialsSection = () => {
       isDarkBackground
       p={8}
       py={16}
+      minHeight="auto"
       alignItems="center"
       spacing={8}
     >
