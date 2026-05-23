@@ -30,26 +30,15 @@ const LandingSection = () => {
 
     window.addEventListener("scroll", scrollHandler);
 
-    // Calendly script
-    const script = document.createElement("script");
-    script.src =
-      "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
     return () => {
       window.removeEventListener("scroll", scrollHandler);
-      document.body.removeChild(script);
     };
   }, []);
 
-  const openCalendly = () => {
-    window.Calendly.initPopupWidget({
-      url: "https://calendly.com/jlfontebasso/reserva",
-    });
-
-    return false;
+  const scrollToContact = () => {
+    document
+      .getElementById("contactme")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -104,7 +93,7 @@ const LandingSection = () => {
             size="lg"
             borderRadius="full"
             px={8}
-            onClick={openCalendly}
+            onClick={scrollToContact}
           >
             Reservar primera sesión
           </Button>
