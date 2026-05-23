@@ -81,7 +81,6 @@ const LandingSection = () => {
           <Heading
             as="h4"
             size="md"
-            noOfLines={1}
             color={{ base: "gray.800", md: "white" }}
             textAlign="center"
           >
@@ -100,7 +99,6 @@ const LandingSection = () => {
           <Heading
             as="h1"
             size="lg"
-            noOfLines={1}
             id="bio"
             color={{ base: "gray.800", md: "white" }}
           >
@@ -110,7 +108,6 @@ const LandingSection = () => {
           <Heading
             as="h2"
             size="sm"
-            noOfLines={1}
             id="bio"
             color={{ base: "gray.700", md: "white" }}
           >
