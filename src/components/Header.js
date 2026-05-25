@@ -83,7 +83,7 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      backgroundColor="#EDF2F7"
       ref={headerRef}
       zIndex={2}
     >
@@ -116,7 +116,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Servicios
+              
             </Link>
             <Link
             href="#credentialsSection"
@@ -124,7 +124,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Sobre mí
+              
             </Link>
             <Link
             href="#contactme"
@@ -132,7 +132,7 @@ const Header = () => {
             transition="color 0.3s ease"
             _hover={{color:"green.500"}}
             >
-              Reserva una consulta
+              Entrevista
             </Link>
            </HStack>
          </nav> 
