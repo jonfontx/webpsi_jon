@@ -10,30 +10,10 @@ import myAvatar from "../images/avatar3.jpeg";
 import video from "../images/Terapiavideo.webm";
 import videoMp4 from "../images/Terapiavideo.mp4";
 
-const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
 
 const LandingSection = () => {
-  useEffect(() => {
-    const videoTag = document.querySelector(".videoTag");
-
-    const scrollHandler = () => {
-      const scrollTop = window.scrollY;
-
-      if (videoTag) {
-        videoTag.style.transform = `translate3d(0, ${
-          scrollTop * 0.5
-        }px, 0)`;
-      }
-    };
-
-    window.addEventListener("scroll", scrollHandler);
-
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
 
   const scrollToContact = () => {
     document
@@ -47,56 +27,44 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#F7FAFC"
+      backgroundColor="#FFFFFF"
     >
-      <video
-        className="videoTag"
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          zIndex: 0,
-        }}
-      >
-        <source src={video} type="video/webm" />
-        <source src={videoMp4} type="video/mp4" />
-      </video>
+      <VStack spacing={12} maxW="520px" px={6}>
 
-      <VStack spacing={16} style={{ zIndex: 1 }}>
-        <VStack spacing={4}>
-          <Avatar
-            src={myAvatar}
-            size="2xl"
-            name="Jonatan Fontebasso"
-            mt={{ base: "20" }}
-          />
-
-          <Heading as="h4" size="md" noOfLines={1}>
-            {greeting}
-          </Heading>
-        </VStack>
-
-        <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading as="h1" size="lg" noOfLines={1} id="bio">
+        {/* ENCUADRE MÍNIMO */}
+        <VStack spacing={1}>
+          <Text fontSize="sm" fontWeight="300" color="gray.700">
             {bio1}
-          </Heading>
+          </Text>
 
-          <Heading as="h2" size="sm" noOfLines={1} id="bio">
+          <Text fontSize="xs" fontWeight="300" color="gray.500">
             {bio2}
-          </Heading>
-
-          <Button
-            colorScheme="teal"
-            size="lg"
-            borderRadius="full"
-            px={8}
-            onClick={scrollToContact}
-          >
-            Reservar consulta
-          </Button>
+          </Text>
         </VStack>
+
+        {/* ACTO CENTRAL */}
+        <Heading
+          as="h1"
+          fontSize="lg"
+          fontWeight="300"
+          letterSpacing="0.5px"
+        >
+          Solicitar entrevista
+        </Heading>
+
+        {/* ACCIÓN */}
+        <Button
+          variant="outline"
+          borderRadius="0"
+          px={12}
+          py={6}
+          fontWeight="300"
+          onClick={scrollToContact}
+          _hover={{ background: "gray.50" }}
+        >
+          Continuar
+        </Button>
+
       </VStack>
     </FullScreenSection>
   );
