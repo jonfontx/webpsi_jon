@@ -31,7 +31,7 @@ const ContactMeSection = () => {
       <VStack
         w="100%"
         maxW="1200px"
-        px={6}
+        px={2}
         alignItems="center"
         id="contactme"
         spacing={8}
@@ -40,15 +40,6 @@ const ContactMeSection = () => {
           Reserva tu sesión
         </Heading>
 
-        <Text
-          fontSize="lg"
-          textAlign="center"
-          maxW="700px"
-          opacity={0.9}
-        >
-          Puedes reservar directamente una primera sesión online
-          eligiendo el día y horario que mejor se adapten a ti.
-        </Text>
 
         <Box
           w="100%"
