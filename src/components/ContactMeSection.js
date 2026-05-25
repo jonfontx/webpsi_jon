@@ -1,56 +1,60 @@
 import React, { useEffect } from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 const ContactMeSection = () => {
   useEffect(() => {
-    const script = document.createElement("script");
+    // Evita duplicar el script si ya existe
+    const existingScript = document.querySelector(
+      'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+    );
 
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src =
+        "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (
     <FullScreenSection
       className="fullscreen"
-      backgroundColor="#F7FAFC"
-      py={16}
-      spacing={8}
+      backgroundColor="#FFFFFF"
+      py={20}
     >
       <VStack
         w="100%"
-        maxW="1200px"
+        maxW="900px"
         px={6}
         alignItems="center"
         id="contactme"
-        spacing={8}
+        spacing={10}
       >
-        <Heading textAlign="center">
+        {/* ENCABEZADO MINIMAL */}
+        <Heading
+          textAlign="center"
+          fontSize="lg"
+          fontWeight="300"
+          letterSpacing="0.04em"
+          color="#1A1A1A"
+        >
           
         </Heading>
 
-
+        {/* CALENDLY */}
         <Box
           w="100%"
           bg="white"
-          borderRadius="16px"
+          border="1px solid"
+          borderColor="gray.200"
+          borderRadius="0"
           overflow="hidden"
-          p={2}
         >
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/jlfontebasso/reserva"
+            data-url="https://calendly.com/jlfontebasso/reserva?hide_event_type_details=1"
             style={{
               minWidth: "320px",
               height: "700px",
