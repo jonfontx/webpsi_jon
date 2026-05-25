@@ -42,7 +42,7 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#F7FAFC"
+      backgroundColor="#EDF2F7"
     >
 
       <VStack spacing={16} style={{ zIndex: 1 }}>
@@ -63,11 +63,13 @@ const LandingSection = () => {
           </Heading>
 
           <Button
-            colorScheme="blackAlpha"
-            size="lg"
-            borderRadius="full"
-            px={8}
-            onClick={scrollToContact}
+          variant="outline"
+          colorScheme="blackAlpha"
+          borderRadius="0"
+          px={12}
+          py={6}
+          fontWeight="300"
+          onClick={scrollToContact}
           >
             Solicitar Entrevista
           </Button>
