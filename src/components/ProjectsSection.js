@@ -3,8 +3,9 @@ import FullScreenSection from "./FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
-/*
+
 const projects = [
+  /*
  {
    title: "Psicoterapia Individual",
    description:
@@ -28,7 +29,7 @@ const projects = [
     getImageSrc: () => require("../images/photo11.jpeg"),
     //url:"https://tiendaterapiavital.com/"//
  }, 
-/*
+
  {
    title: "Espacio de lectura y reflexión",
    description:
@@ -36,7 +37,7 @@ const projects = [
    getImageSrc: () => require("../images/photox.jpeg"),
    //url:""//
  },
-
+*/
 ];
 
 const ProjectsSection = () => {
@@ -69,5 +70,5 @@ const ProjectsSection = () => {
    </FullScreenSection>
  );
 };
-*/
+
 export default ProjectsSection;
