@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import {
-  Avatar,
   Heading,
   VStack,
   Button,
@@ -48,11 +47,6 @@ const LandingSection = () => {
 
       <VStack spacing={16} style={{ zIndex: 1 }}>
         <VStack spacing={4}>
-          <Avatar
-            size="2xl"
-            name="Jonatan Fontebasso"
-            mt={{ base: "20" }}
-          />
 
           <Heading as="h4" size="md" noOfLines={1}>
             {greeting}
@@ -69,7 +63,7 @@ const LandingSection = () => {
           </Heading>
 
           <Button
-            colorScheme="teal"
+            colorScheme="blackAlpha"
             size="lg"
             borderRadius="full"
             px={8}
