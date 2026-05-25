@@ -3,7 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
-
+/*
 const projects = [
  {
    title: "Psicoterapia Individual",
@@ -36,7 +36,7 @@ const projects = [
    getImageSrc: () => require("../images/photox.jpeg"),
    //url:""//
  },
-*/
+
 ];
 
 const ProjectsSection = () => {
