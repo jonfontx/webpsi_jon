@@ -29,15 +29,16 @@ const ContactMeSection = () => {
       spacing={8}
     >
       <VStack
-  w="100%"
-  maxW="900px"
-  px={6}
-  alignItems="center"
-  id="contactme"
-  spacing={10}
->
-
-</VStack>
+        w="100%"
+        maxW="1200px"
+        px={6}
+        alignItems="center"
+        id="contactme"
+        spacing={8}
+      >
+        <Heading textAlign="center">
+          
+        </Heading>
 
 
         <Box
