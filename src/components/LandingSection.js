@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
-  Avatar,
   Heading,
   VStack,
   Button,
+  Text,
+  Box,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import myAvatar from "../images/avatar3.jpeg";
-import video from "../images/Terapiavideo.webm";
-import videoMp4 from "../images/Terapiavideo.mp4";
 
 const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
