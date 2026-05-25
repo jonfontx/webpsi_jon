@@ -28,7 +28,7 @@ const projects = [
     getImageSrc: () => require("../images/photo11.jpeg"),
     //url:"https://tiendaterapiavital.com/"//
  }, 
-
+/*
  {
    title: "Espacio de lectura y reflexión",
    description:
@@ -36,7 +36,7 @@ const projects = [
    getImageSrc: () => require("../images/photox.jpeg"),
    //url:""//
  },
-
+*/
 ];
 
 const ProjectsSection = () => {
