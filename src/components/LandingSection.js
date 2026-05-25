@@ -3,31 +3,36 @@ import {
   Heading,
   VStack,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
 
 const LandingSection = () => {
+
   useEffect(() => {
     const scrollHandler = () => {
       const landingSection = document.querySelector(".landing");
+
       if (landingSection) {
         const scrollPosition = window.scrollY;
         const sectionHeight = landingSection.offsetHeight;
-        const opacity = Math.max(0, 1 - scrollPosition / sectionHeight);
+
+        // Evita que desaparezca por completo
+        const opacity = Math.max(
+          0.25,
+          1 - scrollPosition / sectionHeight
+        );
+
         landingSection.style.opacity = opacity;
       }
-    };  
+    };
 
     window.addEventListener("scroll", scrollHandler);
-
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
+    return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
   const scrollToContact = () => {
@@ -42,38 +47,61 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#EDF2F7"
+      backgroundColor="#FFFFFF"
     >
 
-      <VStack spacing={16} style={{ zIndex: 1 }}>
-        <VStack spacing={4}>
+      <VStack spacing={12} maxW="520px" px={6}>
 
-          <Heading as="h4" size="md" noOfLines={1}>
+        {/* IDENTIDAD (DISCRETA) */}
+        <VStack spacing={2}>
+          <Heading
+            as="h3"
+            size="sm"
+            fontWeight="300"
+            color="gray.700"
+            letterSpacing="0.5px"
+          >
             {greeting}
           </Heading>
         </VStack>
 
-        <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading as="h1" size="lg" noOfLines={1} id="bio">
+        {/* ENCUADRE CLÍNICO */}
+        <VStack spacing={1}>
+          <Text fontSize="sm" fontWeight="300" color="gray.700">
             {bio1}
-          </Heading>
+          </Text>
 
-          <Heading as="h2" size="sm" noOfLines={1} id="bio">
+          <Text fontSize="xs" fontWeight="300" color="gray.500">
             {bio2}
-          </Heading>
+          </Text>
+        </VStack>
 
-          <Button
+        {/* ACCIÓN CENTRAL */}
+        <Heading
+          as="h1"
+          fontSize="lg"
+          fontWeight="300"
+          letterSpacing="0.5px"
+        >
+          Solicitar entrevista
+        </Heading>
+
+        {/* BOTÓN (ESTILO CLÍNICO) */}
+        <Button
           variant="outline"
-          colorScheme="blackAlpha"
+          border="1px solid"
+          borderColor="gray.400"
           borderRadius="0"
           px={12}
           py={6}
           fontWeight="300"
+          bg="transparent"
+          _hover={{ background: "gray.50" }}
           onClick={scrollToContact}
-          >
-            Solicitar Entrevista
-          </Button>
-        </VStack>
+        >
+          Continuar
+        </Button>
+
       </VStack>
     </FullScreenSection>
   );
