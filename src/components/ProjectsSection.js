@@ -69,5 +69,5 @@ const ProjectsSection = () => {
    </FullScreenSection>
  );
 };
-
+*/
 export default ProjectsSection;
