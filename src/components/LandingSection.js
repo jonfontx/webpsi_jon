@@ -4,11 +4,12 @@ import {
   VStack,
   Text,
   Button,
+  Avatar,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
-// ✅ imagen desde src
 import landingBg from "../images/back.jpeg";
+import myAvatar from "../images/avatar3.jpeg";
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
@@ -21,10 +22,10 @@ const LandingSection = () => {
       const el = document.querySelector(".landing");
       if (!el) return;
 
-      const scroll = window.scrollY;
+      const scrollTop = window.scrollY;
       const height = el.offsetHeight;
 
-      const opacity = Math.max(0.3, 1 - scroll / height);
+      const opacity = Math.max(0.3, 1 - scrollTop / height);
       el.style.opacity = opacity;
     };
 
@@ -44,103 +45,73 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="transparent"
+      backgroundColor="#F7FAFC"
       style={{
-        fontFamily:
-          "Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
         position: "relative",
-        minHeight: "100vh",
-        width: "100%",
         overflow: "hidden",
       }}
     >
 
-      {/* 🖼 BACKGROUND IMAGE FULL SCREEN */}
-      <div
+      {/* 🖼 BACKGROUND (MISMO CONCEPTO QUE VIDEO) */}
+      <img
+        src={landingBg}
+        alt=""
         style={{
           position: "absolute",
-          inset: 0,
-          width: "100vw",
-          height: "100vh",
-          backgroundImage: `url(${landingBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
           zIndex: 0,
         }}
       />
 
-      {/* 🧊 OVERLAY CLÍNICO */}
+      {/* 🧊 OVERLAY (equivalente a “capa estética”) */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(255,255,255,0.78)",
+          backgroundColor: "rgba(255,255,255,0.75)",
           zIndex: 1,
         }}
       />
 
       {/* CONTENT */}
-      <VStack
-        spacing={14}
-        maxW="540px"
-        px={6}
-        position="relative"
-        zIndex={2}
-      >
+      <VStack spacing={16} style={{ zIndex: 2 }}>
 
-        {/* NOMBRE */}
-        <Heading
-          as="h3"
-          fontSize="sm"
-          fontWeight="300"
-          letterSpacing="0.12em"
-          color="#2D2D2D"
-          textTransform="uppercase"
-        >
-          {greeting}
-        </Heading>
+        <VStack spacing={4}>
+          <Avatar
+            src={myAvatar}
+            size="2xl"
+            name="Jonatan Fontebasso"
+            mt={{ base: "20" }}
+          />
 
-        {/* ENCUADRE CLÍNICO */}
-        <VStack spacing={1}>
-          <Text fontSize="sm" fontWeight="300" color="#3A3A3A">
-            {bio1}
-          </Text>
-
-          <Text fontSize="xs" fontWeight="300" color="#7A7A7A">
-            {bio2}
-          </Text>
+          <Heading as="h4" size="md">
+            {greeting}
+          </Heading>
         </VStack>
 
-        {/* FRASE */}
-        <Heading
-          as="h1"
-          fontSize="lg"
-          fontWeight="300"
-          letterSpacing="0.03em"
-          color="#1A1A1A"
-        >
-          La demanda no comienza donde se cree
-        </Heading>
+        <VStack spacing={6} mt={{ base: "10" }}>
+          <Heading as="h1" size="lg">
+            {bio1}
+          </Heading>
 
-        {/* BOTÓN */}
-        <Button
-          onClick={scrollToContact}
-          variant="outline"
-          border="1px solid #2D2D2D"
-          borderRadius="0"
-          px={14}
-          py={6}
-          fontWeight="300"
-          letterSpacing="0.08em"
-          bg="transparent"
-          color="#1A1A1A"
-          _hover={{
-            background: "#F7F7F7",
-          }}
-        >
-          Solicitar entrevista
-        </Button>
+          <Heading as="h2" size="sm">
+            {bio2}
+          </Heading>
+
+          <Button
+            colorScheme="teal"
+            size="lg"
+            borderRadius="full"
+            px={8}
+            onClick={scrollToContact}
+          >
+            Reservar consulta
+          </Button>
+        </VStack>
 
       </VStack>
     </FullScreenSection>
