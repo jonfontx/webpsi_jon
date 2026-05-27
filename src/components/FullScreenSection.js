@@ -1,5 +1,5 @@
 import * as React from "react";
-import { VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 
 const FullScreenSection = ({
   children,
@@ -8,28 +8,25 @@ const FullScreenSection = ({
   ...boxProps
 }) => {
   return (
-    <VStack
-      width="100%"
+    <Box
+      width="100vw"
       minHeight="100vh"
       position="relative"
+      overflow="hidden"
       backgroundColor={backgroundColor}
       color={isDarkBackground ? "white" : "black"}
-      spacing={0}
-      m={0}
-      p={0}
     >
-      {/* CONTENIDO CENTRADO INTERNO */}
       <VStack
         width="100%"
-        maxW="1280px"
-        minH="100vh"
+        minHeight="100vh"
         justifyContent="center"
         alignItems="center"
+        px={4}
         {...boxProps}
       >
         {children}
       </VStack>
-    </VStack>
+    </Box>
   );
 };
 
