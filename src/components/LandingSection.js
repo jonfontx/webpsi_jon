@@ -1,31 +1,24 @@
 import React, { useEffect } from "react";
-import {
-  Heading,
-  VStack,
-  Text,
-  Button,
-  Avatar,
-} from "@chakra-ui/react";
+import { Heading, VStack, Text, Button } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
+// imagen desde src
 import landingBg from "../images/back.jpeg";
-import myAvatar from "../images/avatar3.jpeg";
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
 
 const LandingSection = () => {
-
   useEffect(() => {
     const scrollHandler = () => {
       const el = document.querySelector(".landing");
       if (!el) return;
 
-      const scrollTop = window.scrollY;
+      const scroll = window.scrollY;
       const height = el.offsetHeight;
 
-      const opacity = Math.max(0.3, 1 - scrollTop / height);
+      const opacity = Math.max(0.3, 1 - scroll / height);
       el.style.opacity = opacity;
     };
 
@@ -45,74 +38,101 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#F7FAFC"
+      backgroundColor="transparent"
       style={{
+        fontFamily:
+          "Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
         position: "relative",
+        minHeight: "100vh",
+        width: "100%",
         overflow: "hidden",
+        margin: 0,
+        padding: 0,
       }}
     >
-
-      {/* 🖼 BACKGROUND (MISMO CONCEPTO QUE VIDEO) */}
-      <img
-        src={landingBg}
-        alt=""
+      {/* 🖼 BACKGROUND FULL BLEED */}
+      <div
         style={{
           position: "absolute",
           top: 0,
           left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
+          right: 0,
+          bottom: 0,
+          backgroundImage: `url(${landingBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           zIndex: 0,
         }}
       />
 
-      {/* 🧊 OVERLAY (equivalente a “capa estética”) */}
+      {/* 🧊 OVERLAY */}
       <div
         style={{
           position: "absolute",
-          inset: 0,
-          backgroundColor: "rgba(255,255,255,0.75)",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(255,255,255,0.78)",
           zIndex: 1,
         }}
       />
 
       {/* CONTENT */}
-      <VStack spacing={16} style={{ zIndex: 2 }}>
+      <VStack
+        spacing={14}
+        maxW="540px"
+        px={6}
+        position="relative"
+        zIndex={2}
+      >
+        <Heading
+          as="h3"
+          fontSize="sm"
+          fontWeight="300"
+          letterSpacing="0.12em"
+          color="#2D2D2D"
+          textTransform="uppercase"
+        >
+          {greeting}
+        </Heading>
 
-        <VStack spacing={4}>
-          <Avatar
-            src={myAvatar}
-            size="2xl"
-            name="Jonatan Fontebasso"
-            mt={{ base: "20" }}
-          />
-
-          <Heading as="h4" size="md">
-            {greeting}
-          </Heading>
-        </VStack>
-
-        <VStack spacing={6} mt={{ base: "10" }}>
-          <Heading as="h1" size="lg">
+        <VStack spacing={1}>
+          <Text fontSize="sm" fontWeight="300" color="#3A3A3A">
             {bio1}
-          </Heading>
+          </Text>
 
-          <Heading as="h2" size="sm">
+          <Text fontSize="xs" fontWeight="300" color="#7A7A7A">
             {bio2}
-          </Heading>
-
-          <Button
-            colorScheme="teal"
-            size="lg"
-            borderRadius="full"
-            px={8}
-            onClick={scrollToContact}
-          >
-            Reservar consulta
-          </Button>
+          </Text>
         </VStack>
 
+        <Heading
+          as="h1"
+          fontSize="lg"
+          fontWeight="300"
+          letterSpacing="0.03em"
+          color="#1A1A1A"
+        >
+          La demanda no comienza donde se cree
+        </Heading>
+
+        <Button
+          onClick={scrollToContact}
+          variant="outline"
+          border="1px solid #2D2D2D"
+          borderRadius="0"
+          px={14}
+          py={6}
+          fontWeight="300"
+          letterSpacing="0.08em"
+          bg="transparent"
+          color="#1A1A1A"
+          _hover={{ background: "#F7F7F7" }}
+        >
+          Solicitar entrevista
+        </Button>
       </VStack>
     </FullScreenSection>
   );
