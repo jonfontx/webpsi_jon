@@ -6,12 +6,13 @@ import {
   Button,
 } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import image from "../images/back.jpeg";
+
+// ✅ imagen desde src
+import landingBg from "../images/back.jpeg";
 
 const greeting = "Jonatan Fontebasso";
 const bio1 = "Psicólogo General Sanitario";
 const bio2 = "Colegiado T-04523";
-
 
 const LandingSection = () => {
 
@@ -43,21 +44,25 @@ const LandingSection = () => {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
-      backgroundColor="#FFFFFF"
+      backgroundColor="transparent"
       style={{
         fontFamily:
           "Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
         position: "relative",
+        minHeight: "100vh",
+        width: "100%",
         overflow: "hidden",
       }}
     >
 
-      {/* 🖼 BACKGROUND IMAGE */}
+      {/* 🖼 BACKGROUND IMAGE FULL SCREEN */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: `url(${image})`,
+          width: "100vw",
+          height: "100vh",
+          backgroundImage: `url(${landingBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -96,7 +101,7 @@ const LandingSection = () => {
           {greeting}
         </Heading>
 
-        {/* ENCUADRE */}
+        {/* ENCUADRE CLÍNICO */}
         <VStack spacing={1}>
           <Text fontSize="sm" fontWeight="300" color="#3A3A3A">
             {bio1}
