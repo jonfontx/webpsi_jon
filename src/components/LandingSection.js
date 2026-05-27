@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Heading, VStack, Text, Button } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
+import { HStack, IconButton } from "@chakra-ui/react";
+import { FaEnvelope, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 // imagen desde src
 import landingBg from "../images/back.jpeg";
@@ -115,7 +117,7 @@ const LandingSection = () => {
           letterSpacing="0.03em"
           color="#1A1A1A"
         >
-          La demanda no comienza donde se cree
+          Atención psicológica online para adultos y adolescentes
         </Heading>
 
         <Button
@@ -133,6 +135,47 @@ const LandingSection = () => {
         >
           Solicitar entrevista
         </Button>
+
+        {/* ICONOS CONTACTO */}
+<HStack spacing={6} pt={2}>
+  {/* MAIL */}
+  <IconButton
+    as="a"
+    href="mailto:jfontebasso@cop.es"
+    aria-label="Email"
+    icon={<FaEnvelope />}
+    variant="ghost"
+    fontSize="20px"
+    color="#1A1A1A"
+    _hover={{ color: "#555" }}
+  />
+
+  {/* WHATSAPP */}
+  <IconButton
+    as="a"
+    href="https://wa.me/34632257615"
+    target="_blank"
+    aria-label="WhatsApp"
+    icon={<FaWhatsapp />}
+    variant="ghost"
+    fontSize="20px"
+    color="#1A1A1A"
+    _hover={{ color: "#25D366" }}
+  />
+
+  {/* LINKEDIN */}
+  <IconButton
+    as="a"
+    href="https://www.linkedin.com/in/jonatan-fontebasso"
+    target="_blank"
+    aria-label="LinkedIn"
+    icon={<FaLinkedin />}
+    variant="ghost"
+    fontSize="20px"
+    color="#1A1A1A"
+    _hover={{ color: "#0A66C2" }}
+  />
+</HStack>
       </VStack>
     </FullScreenSection>
   );
