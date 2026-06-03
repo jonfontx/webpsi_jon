@@ -11,7 +11,6 @@ import ContactMeSection from "./components/ContactMeSection";
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
-import Home from "./pages/Home";
 
 function Home() {
   return (
