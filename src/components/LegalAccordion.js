@@ -6,6 +6,7 @@ import {
   AccordionIcon,
   Box,
 } from "@chakra-ui/react";
+import React from "react";
 
 export default function LegalAccordion() {
   return (
