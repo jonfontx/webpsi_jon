@@ -59,3 +59,4 @@ export default function LegalAccordion() {
     </Accordion>
   );
 }
+export default LegalAccordion;

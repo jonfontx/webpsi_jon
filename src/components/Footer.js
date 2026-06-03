@@ -1,5 +1,6 @@
 import React from "react"; 
 import {Box, Flex} from "@chakra-ui/react"; 
+import LegalAccordion from "./LegalAccordion";
  
 const Footer = () => { 
  return ( 
