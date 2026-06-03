@@ -17,7 +17,7 @@ const Footer = () => {
           gap={2}
         >
           <Text fontSize="sm" textAlign="center">
-            Psicólogo Jonatan Fontebasso • © 2025 • Todos los derechos reservados
+            Psicólogo Jonatan Fontebasso • © 2026 • Todos los derechos reservados
           </Text>
 
           <Stack direction="row" spacing={4} fontSize="sm" opacity={0.8}>

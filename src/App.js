@@ -1,23 +1,45 @@
-import { ChakraProvider } from "@chakra-ui/react"; 
-import LandingSection from "./components/LandingSection"; 
-import ContactMeSection from "./components/ContactMeSection"; 
-import Footer from "./components/Footer"; 
-import { AlertProvider } from "./context/alertContext"; 
-import Alert from "./components/Alert"; 
+import { ChakraProvider } from "@chakra-ui/react";
+import { AlertProvider } from "./context/alertContext";
+import Alert from "./components/Alert";
+import Footer from "./components/Footer";
+
+import { Routes, Route } from "react-router-dom";
+
+import LandingSection from "./components/LandingSection";
+import ContactMeSection from "./components/ContactMeSection";
+
+import AvisoLegal from "./pages/AvisoLegal";
+import Privacidad from "./pages/Privacidad";
+import Cookies from "./pages/Cookies";
+import Home from "./pages/Home";
+
+function Home() {
+  return (
+    <>
+      <LandingSection />
+      <ContactMeSection />
+    </>
+  );
+}
 
 function App() {
- return (
-   <ChakraProvider>
-     <AlertProvider>
-       <main>
-         <LandingSection />
-         <ContactMeSection />
-         <Footer />
-         <Alert />
-       </main>
-     </AlertProvider>
-   </ChakraProvider>
- );
+  return (
+    <ChakraProvider>
+      <AlertProvider>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aviso-legal" element={<AvisoLegal />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/cookies" element={<Cookies />} />
+          </Routes>
+
+          <Footer />
+          <Alert />
+        </main>
+      </AlertProvider>
+    </ChakraProvider>
+  );
 }
 
 export default App;
