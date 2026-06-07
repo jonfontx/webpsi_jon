@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -35,6 +36,7 @@ function App() {
 
           <Footer />
           <Alert />
+          <CookieBanner />
         </main>
       </AlertProvider>
     </ChakraProvider>
