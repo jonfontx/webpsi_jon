@@ -1,6 +1,11 @@
+import { Box, Heading, Text } from "@chakra-ui/react";
+
 export default function Cookies() {
-  return <div>Política de cookies
-    
+  return (
+    <Box maxW="800px" mx="auto" py={10} px={6}>
+      <Heading mb={6}>Política de Cookies</Heading>
+      <Text fontSize="sm">
+
 
 Jonatan Luis Fontebasso informa acerca del uso de las cookies en su página web: jonatanfontebasso.com
 
@@ -138,5 +143,10 @@ Ante esta información es posible llevar a cabo las siguientes acciones:
 
 Aceptar cookies: No se volverá a visualizar este aviso al acceder a cualquier página del portal durante la presente sesión.
 Modificar/personalizar su configuración: Podrá obtener más información sobre qué son las cookies, conocer la Política de cookies de: jonatanfontebasso.com y modificar la configuración de su navegador.
-REV: 20.3009</div>;
+REV: 20.3009
+
+
+      </Text>
+    </Box>
+  );
 }

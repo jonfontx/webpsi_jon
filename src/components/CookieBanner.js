@@ -45,10 +45,8 @@ export default function CookieBanner() {
       borderColor="gray.200"
     >
       <Text fontSize="sm" mb={3}>
-        Este sitio web utiliza cookies propias y de terceros para mejorar la
-        experiencia de navegación y permitir la reserva de citas mediante
-        Calendly. Puede aceptar o rechazar las cookies. Más información en
-        nuestra{" "}
+        Este sitio web utiliza cookies propias y de terceros para obtener estadísticas sobre los hábitos de navegación del usuario, mejorar su experiencia y permitirle compartir contenidos en redes sociales. Usted puede aceptar o rechazar las cookies, así como personalizar cuáles quiere deshabilitar.
+        Puede encontrar toda la información en nuestra Política de Cookies.{" "}
         <Link as={RouterLink} to="/cookies">
           Política de Cookies
         </Link>.

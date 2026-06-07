@@ -1,7 +1,12 @@
-export default function Privacidad() {
-  return <div>Protección de datos de carácter personal según el RGPD
+import { Box, Heading, Text } from "@chakra-ui/react";
 
-    ß
+export default function Privacidad() {
+  return (
+    <Box maxW="800px" mx="auto" py={10} px={6}>
+      <Heading mb={6}>Protección de datos de carácter personal según el RGPD</Heading>
+      <Text fontSize="sm">
+        AVISO LEGAL
+
 Jonatan Luis Fontebasso , en aplicación de la normativa vigente en materia de protección de datos de carácter personal, informa que los datos personales que se recogen a través de los formularios del Sitio web: jonatanfontebasso.com, se incluyen en los ficheros automatizados específicos de usuarios de los servicios de Jonatan Luis Fontebasso
 
 La recogida y tratamiento automatizado de los datos de carácter personal tiene como finalidad el mantenimiento de la relación comercial y el desempeño de tareas de información, formación, asesoramiento y otras actividades propias de Jonatan Luis Fontebasso
@@ -96,5 +101,8 @@ En el caso de usuarios con los que exista una relación contractual previa, Jona
 
 En todo caso, el usuario, tras acreditar su identidad, podrá solicitar que no se le haga llegar más información comercial a través de los canales de Atención al Cliente.
 
-REV: 20.3009</div>;
+REV: 20.3009
+      </Text>
+    </Box>
+  );
 }
